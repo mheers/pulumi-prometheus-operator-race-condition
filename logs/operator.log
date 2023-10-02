@@ -1,0 +1,493 @@
+level=debug ts=2023-10-02T08:30:23.653405052Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229: Watch close - *v1alpha1.PrometheusAgent total 0 items received"
+level=debug ts=2023-10-02T08:30:23.654850489Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/apis/monitoring.coreos.com/v1alpha1/prometheusagents?allowWatchBookmarks=true&resourceVersion=43567&timeout=5m36s&timeoutSeconds=336&watch=true 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.45660956Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus
+level=debug ts=2023-10-02T08:30:24.469787412Z caller=operator.go:946 component=prometheusoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:24.469787445Z caller=operator.go:1049 component=prometheusagentoperator msg="ConfigMap deleted"
+level=warn ts=2023-10-02T08:30:24.469888366Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:24.46990388Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:24.469911893Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:24.469942275Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:24.470961347Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.471011553Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.471658801Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.471663757Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.471692611Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.471698139Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.474098356Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.474098365Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.474264354Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:24.474585157Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:24.474687103Z caller=rules.go:125 component=prometheusoperator msg="no PrometheusRule configmap found, creating new one" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:24.475737065Z caller=resource_reconciler.go:304 component=prometheusoperator msg="update handler" old=47325 cur=47518
+level=debug ts=2023-10-02T08:30:24.475753633Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.475759856Z caller=resource_reconciler.go:304 component=alertmanageroperator msg="update handler" old=47325 cur=47518
+level=debug ts=2023-10-02T08:30:24.475761546Z caller=resource_reconciler.go:304 component=thanosoperator msg="update handler" old=47325 cur=47518
+level=debug ts=2023-10-02T08:30:24.475772826Z caller=resource_reconciler.go:145 component=alertmanageroperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.475775984Z caller=resource_reconciler.go:145 component=thanosoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.475935542Z caller=resource_reconciler.go:304 component=prometheusagentoperator msg="update handler" old=47325 cur=47518
+level=debug ts=2023-10-02T08:30:24.475976505Z caller=resource_reconciler.go:145 component=prometheusagentoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.479167336Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps 201 Created in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:24.479212586Z caller=operator.go:935 component=prometheusoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:24.479279647Z caller=operator.go:1039 component=prometheusagentoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:24.479301407Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:24.480934579Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.483358507Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:24.483526818Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.483624369Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.48385325Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.484491518Z caller=resource_reconciler.go:304 component=thanosoperator msg="update handler" old=47518 cur=47521
+level=debug ts=2023-10-02T08:30:24.484504556Z caller=resource_reconciler.go:145 component=thanosoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.484583224Z caller=resource_reconciler.go:304 component=prometheusagentoperator msg="update handler" old=47518 cur=47521
+level=debug ts=2023-10-02T08:30:24.484598644Z caller=resource_reconciler.go:145 component=prometheusagentoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.485194839Z caller=resource_reconciler.go:304 component=prometheusoperator msg="update handler" old=47518 cur=47521
+level=debug ts=2023-10-02T08:30:24.485205003Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.485265276Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.485546044Z caller=resource_reconciler.go:304 component=alertmanageroperator msg="update handler" old=47518 cur=47521
+level=debug ts=2023-10-02T08:30:24.485561596Z caller=resource_reconciler.go:145 component=alertmanageroperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.487688342Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:24.487843044Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.487944853Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.487977087Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.489772358Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.4898926Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:24.491382963Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.49315269Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.493272228Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.493329596Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.493407301Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:24.494516203Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.499005602Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:24.499156186Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:24.499174222Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:24.499238512Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:24.499249307Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:24.49925468Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:24.499271007Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:24.499998755Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.500720197Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.500796877Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:24.50081176Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:24.50191902Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.503342001Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.50367487Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:24.504280503Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus
+level=debug ts=2023-10-02T08:30:24.505012312Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.506203214Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.506271339Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:24.507265047Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 0 milliseconds"
+level=debug ts=2023-10-02T08:30:24.508658745Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.509735076Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 404 Not Found in 0 milliseconds"
+level=debug ts=2023-10-02T08:30:24.511302184Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/services 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:24.511451745Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:24.511481788Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.511563963Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.515354533Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:24.914100194Z caller=resource_reconciler.go:304 component=prometheusoperator msg="update handler" old=47521 cur=47540
+level=debug ts=2023-10-02T08:30:24.9141002Z caller=resource_reconciler.go:304 component=thanosoperator msg="update handler" old=47521 cur=47540
+level=debug ts=2023-10-02T08:30:24.914176594Z caller=resource_reconciler.go:145 component=thanosoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.914175729Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.914289591Z caller=resource_reconciler.go:304 component=alertmanageroperator msg="update handler" old=47521 cur=47540
+level=debug ts=2023-10-02T08:30:24.914366386Z caller=resource_reconciler.go:145 component=alertmanageroperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:24.914782Z caller=resource_reconciler.go:304 component=prometheusagentoperator msg="update handler" old=47521 cur=47540
+level=debug ts=2023-10-02T08:30:24.914849625Z caller=resource_reconciler.go:145 component=prometheusagentoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.218494258Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.218542081Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=warn ts=2023-10-02T08:30:25.218619497Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.218661358Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.218691419Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.218744775Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.218761033Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.224193021Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 5 milliseconds"
+level=debug ts=2023-10-02T08:30:25.22463738Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.224727976Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.230360356Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 5 milliseconds"
+level=debug ts=2023-10-02T08:30:25.236281708Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 404 Not Found in 5 milliseconds"
+level=debug ts=2023-10-02T08:30:25.244729824Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 7 milliseconds"
+level=debug ts=2023-10-02T08:30:25.245004818Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.245003549Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.245217983Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.245563045Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.246022021Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.246205902Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.249087868Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:25.249238388Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.251787035Z caller=resource_reconciler.go:304 component=prometheusagentoperator msg="update handler" old=47540 cur=47546
+level=debug ts=2023-10-02T08:30:25.251813972Z caller=resource_reconciler.go:145 component=prometheusagentoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.253060507Z caller=resource_reconciler.go:304 component=thanosoperator msg="update handler" old=47540 cur=47546
+level=debug ts=2023-10-02T08:30:25.253082151Z caller=resource_reconciler.go:145 component=thanosoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.25356743Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:25.254547367Z caller=resource_reconciler.go:304 component=prometheusoperator msg="update handler" old=47540 cur=47546
+level=debug ts=2023-10-02T08:30:25.254574152Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.255182717Z caller=resource_reconciler.go:304 component=alertmanageroperator msg="update handler" old=47540 cur=47546
+level=debug ts=2023-10-02T08:30:25.255203025Z caller=resource_reconciler.go:145 component=alertmanageroperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.257029508Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:25.259214235Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.261881861Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.262071618Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.262094544Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.262141313Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.262154471Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.262164623Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.26218649Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.262251771Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.262656417Z caller=operator.go:946 component=prometheusoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:25.262843744Z caller=operator.go:1049 component=prometheusagentoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:25.263957543Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.264026369Z caller=rules.go:125 component=prometheusoperator msg="no PrometheusRule configmap found, creating new one" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.26627763Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps 201 Created in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.266481993Z caller=operator.go:935 component=prometheusoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:25.266495295Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.266561522Z caller=operator.go:1039 component=prometheusagentoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:25.267849668Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 5 milliseconds"
+level=debug ts=2023-10-02T08:30:25.26812696Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus
+level=debug ts=2023-10-02T08:30:25.268355141Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.27039983Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.270514414Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.270529635Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.27069226Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.271922181Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.273515746Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.274786648Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.274842572Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.276261119Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.277942227Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.279555946Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.2820079Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.282197489Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.282215539Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.282252348Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.282260261Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.282265647Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.282298499Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.282362824Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.283758444Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.283891799Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.283911286Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.285820737Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.287016557Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:25.2873119Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.287484933Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.287535783Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.287739364Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.288970693Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.29030818Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.29035143Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.291718448Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.293800168Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.293976487Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.294172263Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.294207981Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.295818923Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.298957119Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.299178945Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.299243473Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.299302741Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.299311598Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.29931869Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.299353Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.299630723Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.301324847Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.301458733Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.301509778Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.303074967Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.30381959Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:25.304456949Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.306304555Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.307870776Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.307937125Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.309299194Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.311477242Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.313171063Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.315369264Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.315539547Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.315562559Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.315681682Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.319646372Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:25.672086456Z caller=resource_reconciler.go:304 component=thanosoperator msg="update handler" old=47546 cur=47558
+level=debug ts=2023-10-02T08:30:25.672117309Z caller=resource_reconciler.go:145 component=thanosoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.672139543Z caller=resource_reconciler.go:304 component=prometheusoperator msg="update handler" old=47546 cur=47558
+level=debug ts=2023-10-02T08:30:25.672155119Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.672278992Z caller=resource_reconciler.go:304 component=prometheusagentoperator msg="update handler" old=47546 cur=47558
+level=debug ts=2023-10-02T08:30:25.672298402Z caller=resource_reconciler.go:145 component=prometheusagentoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.672496424Z caller=resource_reconciler.go:304 component=alertmanageroperator msg="update handler" old=47546 cur=47558
+level=debug ts=2023-10-02T08:30:25.672514364Z caller=resource_reconciler.go:145 component=alertmanageroperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.862743845Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.862743857Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.862808422Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=warn ts=2023-10-02T08:30:25.862830908Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.86284288Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.862852245Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.862872009Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.864647138Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.864802111Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.86482445Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.866244621Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.868003605Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.870578128Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.87057812Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.870636095Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.870744341Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.87238978Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.872459393Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.873832273Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.875786756Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.8773232Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.879397237Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.879579275Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.879607989Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.879672771Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.87968797Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.879697894Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.879725681Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.879776878Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.881271978Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.881389377Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.881411408Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.88279068Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.883902857Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:25.884216303Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.886265836Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.88734443Z caller=operator.go:946 component=prometheusoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:25.887405194Z caller=operator.go:1049 component=prometheusagentoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:25.888030412Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.888100504Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.88945081Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.891669847Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.893179869Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.895841284Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.896020287Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.896047053Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.896096304Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.896108971Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.896117848Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.896145001Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.896208249Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.898169963Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.898246184Z caller=rules.go:125 component=prometheusoperator msg="no PrometheusRule configmap found, creating new one" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.90056232Z caller=operator.go:935 component=prometheusoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:25.900678937Z caller=operator.go:1039 component=prometheusagentoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:25.900746321Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps 201 Created in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.900773243Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:25.900865092Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.902399726Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.903776266Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.905915913Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.907395019Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.90744949Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.908958985Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.91123569Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.912517161Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.912722564Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.912754908Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.912986509Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.91501557Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.915186752Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.915205524Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.915270772Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.915278401Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.915283335Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.915299521Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.915400066Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.916804969Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.916912353Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.916932838Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.918403829Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.919268742Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:25.920349218Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.92053579Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.920534677Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.920671268Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.921935544Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.923846397Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.925320906Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.925371048Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.927225968Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.929311845Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.930654782Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.933007577Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.933210999Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.933252102Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.933315522Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.933328047Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.933340562Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.933362339Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.933380385Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.935519705Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:25.935680813Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.935701713Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.937599403Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.93782467Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.937922477Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.938183827Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:25.939450773Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.939558621Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 6 milliseconds"
+level=debug ts=2023-10-02T08:30:25.941587992Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.943467244Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.943542061Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.945277619Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.946965001Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.947084041Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.947222266Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.947296427Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:25.948381311Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.950277775Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.95042741Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.950445304Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:25.950486517Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:25.950495288Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:25.950502381Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.950521848Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:25.950628643Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.951939873Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.952034408Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:25.952048633Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:25.953301525Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.954277818Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:25.95449368Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.955975775Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.95713613Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.957198728Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:25.958277839Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.959792673Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.961005795Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.962706046Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:25.962807001Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:25.962825276Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.962878348Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:25.966064176Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.447248972Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=warn ts=2023-10-02T08:30:26.447457103Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=debug ts=2023-10-02T08:30:26.447263599Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=info ts=2023-10-02T08:30:26.447528214Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:26.447581591Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.447678503Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:26.448070383Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.453526733Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 5 milliseconds"
+level=debug ts=2023-10-02T08:30:26.453901431Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.453989721Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:26.458106695Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.462641404Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:26.466909033Z caller=operator.go:946 component=prometheusoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:26.467002833Z caller=operator.go:1049 component=prometheusagentoperator msg="ConfigMap deleted"
+level=debug ts=2023-10-02T08:30:26.467825895Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:26.470577778Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.470689182Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:26.473098312Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 404 Not Found in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.476669165Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.476724135Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.47710077Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.477301383Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.478782984Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.481241205Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.48141712Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:26.481448983Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:26.481517649Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:26.481536103Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:26.481547052Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.481589682Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:26.481630359Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:26.483167839Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.483239928Z caller=rules.go:125 component=prometheusoperator msg="no PrometheusRule configmap found, creating new one" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.486467267Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:26.48683248Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps 201 Created in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.487069561Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:26.48718942Z caller=operator.go:1039 component=prometheusagentoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:26.487379293Z caller=operator.go:935 component=prometheusoperator msg="ConfigMap added"
+level=debug ts=2023-10-02T08:30:26.487502937Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus
+level=debug ts=2023-10-02T08:30:26.488421366Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.488443202Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.488897433Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.489909999Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.491389972Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.493208711Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.493430348Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.493632031Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.49371611Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.49555802Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.495662314Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:26.497147922Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.499615068Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.502027979Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.504815174Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.505073301Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:26.505096563Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:26.505165179Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:26.505174733Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:26.50518071Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.505201112Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:26.505280472Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:26.507310115Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.507554668Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.507570846Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:26.509282903Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.510131865Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:26.510962893Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.512605898Z caller=operator.go:892 component=prometheusoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.512644218Z caller=operator.go:379 component=alertmanageroperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.512767077Z caller=operator.go:1074 component=prometheusagentoperator msg="Secret deleted"
+level=debug ts=2023-10-02T08:30:26.512977175Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.514439578Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.514519355Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=debug ts=2023-10-02T08:30:26.516039301Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.519579138Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.526984362Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 6 milliseconds"
+level=debug ts=2023-10-02T08:30:26.530959595Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/services/prometheus-operated 200 OK in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.531156255Z caller=operator.go:1226 component=prometheusoperator key=prometheus/prometheus statefulset=prometheus-prometheus shard=0 msg="reconciling statefulset"
+level=debug ts=2023-10-02T08:30:26.531183688Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=warn ts=2023-10-02T08:30:26.531237728Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:26.531251297Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:26.531263328Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.531285745Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:26.531371943Z caller=resource_reconciler.go:145 component=prometheusoperator msg="object deletion in progress" object=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:26.533036941Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/configmaps?labelSelector=prometheus-name%3Dprometheus 200 OK in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.533234833Z caller=rules.go:102 component=prometheusoperator msg="no PrometheusRule changes" namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.533262017Z caller=operator.go:1491 component=prometheusoperator msg="neither ServiceMonitor nor PodMonitor, nor Probe selector specified, leaving configuration unmanaged" prometheus=prometheus namespace=prometheus
+level=debug ts=2023-10-02T08:30:26.535510878Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus 404 Not Found in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.536504063Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus/status 200 OK in 4 milliseconds"
+level=debug ts=2023-10-02T08:30:26.539356631Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="POST https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets 201 Created in 3 milliseconds"
+level=debug ts=2023-10-02T08:30:26.539510017Z caller=operator.go:923 component=prometheusoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.539597555Z caller=operator.go:411 component=alertmanageroperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.53973124Z caller=operator.go:1098 component=prometheusagentoperator msg="Secret added"
+level=debug ts=2023-10-02T08:30:26.542116645Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.544375739Z caller=resource_reconciler.go:339 component=prometheusoperator msg="StatefulSet delete"
+level=debug ts=2023-10-02T08:30:26.544679877Z caller=operator.go:545 component=alertmanageroperator msg="StatefulSet key did not match an Alertmanager key format" key=prometheus/prometheus-prometheus
+level=debug ts=2023-10-02T08:30:26.545118349Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="PUT https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-0 200 OK in 2 milliseconds"
+level=debug ts=2023-10-02T08:30:26.546878742Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="DELETE https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-tls-assets-1 404 Not Found in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.546968509Z caller=operator.go:1629 component=prometheusoperator msg="tls-asset secret: stored"
+level=info ts=2023-10-02T08:30:26.547422291Z caller=main.go:466 msg="Received SIGTERM, exiting gracefully..."
+level=debug ts=2023-10-02T08:30:26.548431068Z caller=klog.go:84 component=k8s_client_runtime func=Infof msg="GET https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config  in 1 milliseconds"
+level=debug ts=2023-10-02T08:30:26.548462334Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Prometheus (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548503255Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.ServiceMonitor (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.54854767Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PodMonitor (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548620867Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PrometheusRule (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=error ts=2023-10-02T08:30:26.548668014Z caller=klog.go:116 component=k8s_client_runtime func=ErrorDepth msg="sync \"prometheus/prometheus\" failed: synchronizing web config secret failed: failed to reconcile web config secret: Get \"https://10.43.0.1:443/api/v1/namespaces/prometheus/secrets/prometheus-prometheus-web-config\": context canceled"
+level=warn ts=2023-10-02T08:30:26.548710618Z caller=operator.go:1410 component=prometheusoperator key=prometheus/prometheus msg="neither serviceMonitorSelector nor podMonitorSelector, nor probeSelector specified. Custom configuration is deprecated, use additionalScrapeConfigs instead"
+level=info ts=2023-10-02T08:30:26.548725541Z caller=operator.go:1189 component=prometheusoperator key=prometheus/prometheus msg="sync prometheus"
+level=debug ts=2023-10-02T08:30:26.548733529Z caller=rules.go:185 component=prometheusoperator msg="selected RuleNamespaces" namespaces=prometheus namespace=prometheus prometheus=prometheus
+level=debug ts=2023-10-02T08:30:26.548760508Z caller=rules.go:217 component=prometheusoperator prometheus=prometheus namespace=prometheus msg="selected Rules" rules=
+level=debug ts=2023-10-02T08:30:26.548793532Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1alpha1.ScrapeConfig (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548556084Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Namespace (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=error ts=2023-10-02T08:30:26.548821982Z caller=klog.go:116 component=k8s_client_runtime func=ErrorDepth msg="sync \"prometheus/prometheus\" failed: client rate limiter Wait returned an error: context canceled"
+level=debug ts=2023-10-02T08:30:26.548841376Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.StatefulSet (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548864454Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1alpha1.PrometheusAgent (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548884964Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Probe (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548944149Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Secret (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.548989803Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.StatefulSet (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.5490125Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PartialObjectMetadata (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549035018Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PartialObjectMetadata (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549050941Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.StatefulSet (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549071673Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.StatefulSet (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549087931Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PrometheusRule (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.54912262Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Probe (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.54914616Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.ServiceMonitor (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.54916008Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.ConfigMap (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549188771Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PartialObjectMetadata (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549224801Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Alertmanager (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549252366Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1alpha1.AlertmanagerConfig (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549273975Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PartialObjectMetadata (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549306332Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Namespace (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549332111Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.PodMonitor (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549369426Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Namespace (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549402672Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1alpha1.ScrapeConfig (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549436666Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.Namespace (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"
+level=debug ts=2023-10-02T08:30:26.549473482Z caller=klog.go:55 component=k8s_client_runtime func=Verbose.Infof msg="Stopping reflector *v1.ThanosRuler (5m0s) from pkg/mod/k8s.io/client-go@v0.28.1/tools/cache/reflector.go:229"

@@ -1,0 +1,169 @@
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "Metadata",
+  "auditID": "4365992e-d029-4cf3-a02f-2e6169a42f66",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses?fieldSelector=metadata.name%3Dprometheus&timeoutSeconds=300&watch=true",
+  "verb": "watch",
+  "user": {
+    "username": "system:admin",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "172.21.0.3"
+  ],
+  "userAgent": "pulumi-resource-kubernetes/v0.0.0 (linux/amd64) kubernetes/$Format",
+  "objectRef": {
+    "resource": "prometheuses",
+    "namespace": "prometheus",
+    "name": "prometheus",
+    "apiGroup": "monitoring.coreos.com",
+    "apiVersion": "v1"
+  },
+  "requestReceivedTimestamp": "2023-10-02T08:30:24.450421Z",
+  "stageTimestamp": "2023-10-02T08:30:24.450421Z"
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "Metadata",
+  "auditID": "4365992e-d029-4cf3-a02f-2e6169a42f66",
+  "stage": "ResponseStarted",
+  "requestURI": "/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses?fieldSelector=metadata.name%3Dprometheus&timeoutSeconds=300&watch=true",
+  "verb": "watch",
+  "user": {
+    "username": "system:admin",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "172.21.0.3"
+  ],
+  "userAgent": "pulumi-resource-kubernetes/v0.0.0 (linux/amd64) kubernetes/$Format",
+  "objectRef": {
+    "resource": "prometheuses",
+    "namespace": "prometheus",
+    "name": "prometheus",
+    "apiGroup": "monitoring.coreos.com",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestReceivedTimestamp": "2023-10-02T08:30:24.450421Z",
+  "stageTimestamp": "2023-10-02T08:30:24.450933Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "allow",
+    "authorization.k8s.io/reason": ""
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "Metadata",
+  "auditID": "d6bb7095-4acf-456f-8b65-ee273d38e740",
+  "stage": "RequestReceived",
+  "requestURI": "/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus",
+  "verb": "delete",
+  "user": {
+    "username": "system:admin",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "172.21.0.3"
+  ],
+  "userAgent": "pulumi-resource-kubernetes/v0.0.0 (linux/amd64) kubernetes/$Format",
+  "objectRef": {
+    "resource": "prometheuses",
+    "namespace": "prometheus",
+    "name": "prometheus",
+    "apiGroup": "monitoring.coreos.com",
+    "apiVersion": "v1"
+  },
+  "requestReceivedTimestamp": "2023-10-02T08:30:24.451854Z",
+  "stageTimestamp": "2023-10-02T08:30:24.451854Z"
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "Metadata",
+  "auditID": "d6bb7095-4acf-456f-8b65-ee273d38e740",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses/prometheus",
+  "verb": "delete",
+  "user": {
+    "username": "system:admin",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "172.21.0.3"
+  ],
+  "userAgent": "pulumi-resource-kubernetes/v0.0.0 (linux/amd64) kubernetes/$Format",
+  "objectRef": {
+    "resource": "prometheuses",
+    "namespace": "prometheus",
+    "name": "prometheus",
+    "apiGroup": "monitoring.coreos.com",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestReceivedTimestamp": "2023-10-02T08:30:24.451854Z",
+  "stageTimestamp": "2023-10-02T08:30:24.455527Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "allow",
+    "authorization.k8s.io/reason": ""
+  }
+}
+{
+  "kind": "Event",
+  "apiVersion": "audit.k8s.io/v1",
+  "level": "Metadata",
+  "auditID": "4365992e-d029-4cf3-a02f-2e6169a42f66",
+  "stage": "ResponseComplete",
+  "requestURI": "/apis/monitoring.coreos.com/v1/namespaces/prometheus/prometheuses?fieldSelector=metadata.name%3Dprometheus&timeoutSeconds=300&watch=true",
+  "verb": "watch",
+  "user": {
+    "username": "system:admin",
+    "groups": [
+      "system:masters",
+      "system:authenticated"
+    ]
+  },
+  "sourceIPs": [
+    "172.21.0.3"
+  ],
+  "userAgent": "pulumi-resource-kubernetes/v0.0.0 (linux/amd64) kubernetes/$Format",
+  "objectRef": {
+    "resource": "prometheuses",
+    "namespace": "prometheus",
+    "name": "prometheus",
+    "apiGroup": "monitoring.coreos.com",
+    "apiVersion": "v1"
+  },
+  "responseStatus": {
+    "metadata": {},
+    "code": 200
+  },
+  "requestReceivedTimestamp": "2023-10-02T08:30:24.450421Z",
+  "stageTimestamp": "2023-10-02T08:30:27.511499Z",
+  "annotations": {
+    "authorization.k8s.io/decision": "allow",
+    "authorization.k8s.io/reason": ""
+  }
+}
